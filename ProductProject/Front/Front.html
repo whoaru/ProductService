@@ -4,24 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inskey</title>
+    <link rel="stylesheet" href="edit.css">
+    <link rel="shortcut icon" href="img/iniciologo.png" />
 </head>
-<header>
-    <div class="inicio">
-        <img src="/img/iniciologo.png" alt="Logo de inicio">
-    </div>
-    <nav>
-        <a href="">
-            <h1>Inskey</h1>
-        </a>
-        <div class="logobusqueda">
-            <img src="/img/lupalogo.png" alt="Lupa de busqueda">
-        </div>
-        <div class="busqueda">
-            
-        </div>
-    </nav>
-</header>
 <body>
-    
+    <!-- Header -->
+      <header>
+        <div class="logo">
+            <img src="img/iniciologo.png" alt="">
+            <h1>Inskey</h1>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos">
+            <img src="img/lupalogo.png" alt="">
+        </div>
+
+        <div class="nav-right">
+            <img src="img/favslogo.png" alt="" onclick="toggleLoginMenu()">
+            <div class="dropdown">
+                <div class="lang" onclick="toggleLangMenu()">
+                    <img src="img/paislogo.png" alt="">
+                    <span>COP</span>
+                    <div class="lang-divider"></div>
+                </div>
+                <div class="dropdown-content" id="">
+                    <a href="#">Español</a>
+                    <a href="#">Inglés</a>
+                </div>
+            <div class="dropdown2">
+                <div class="lang" onclick="toggleLangMenu()">
+                    <img src="img/profilelogo.png" alt="">
+                </div>
+                <div class="dropdown-content2" id="">
+                    <a href="#">Iniciar sesion</a>
+                    <a href="#">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="img/banner.png" alt="">
+        <img src="img/banner2.png" alt="">
+    </div>
+
+    <!-- Body -->
+    <section>
+        <div class="section-title">- Tendencia -</div>
+        <div class="items-list">
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">- Para ti -</div>
+        <div class="items-list">
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="item">
+                <img src="img/juegologo.png" alt="">
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h4>Sobre Nosotros</h4>
+            <a href="#">Quienes Somos</a>
+            <a href="#">Historia</a>
+        </div>
+        <div class="footer-column">
+            <h4>Ayuda</h4>
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Contactanos</a>
+        </div>
+        <div class="footer-column">
+            <h4>Legal</h4>
+            <a href="#">Terminos de Servicio</a>
+            <a href="#">Politica de Privacidad</a>
+        </div>
+        <div class="social">
+            <h4>Siguenos</h4>
+            <a href="https://instagram.com">
+            <img src="img/inslogo.png" alt="">
+            </a>
+            <a href="https://x.com/home">
+            <img src="img/twitlogo.png" alt="">
+            </a>
+            <a href="https://discord.com/">
+            <img src="img/dislogo.png" alt="">
+            </a>
+            <p>Copyright @2024 Inskey</p>
+        </div>
+    </footer>
+
+    <script>
+
+  // Menu
+  function toggleLangMenu() {
+            const langDropdown = document.getElementById('langDropdown');
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleLoginMenu() {
+            alert("Favoritos");
+        }
+
+        // Cerrar menu al dar click fuera
+        window.onclick = function(event) {
+            if (!event.target.matches('.lang') && !event.target.matches('.nav-right img')) {
+                const langDropdown = document.getElementById('langDropdown');
+                if (langDropdown.style.display === 'block') {
+                    langDropdown.style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
